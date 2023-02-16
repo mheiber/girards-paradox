@@ -844,3 +844,6 @@ module UChain : Chain(U)(DomU)(OrdU).T = struct
 end
 
 module Paradox : Absurd = WellFoundedU(UChain)
+
+module M = Paradox(struct let one = 1 end)
+
